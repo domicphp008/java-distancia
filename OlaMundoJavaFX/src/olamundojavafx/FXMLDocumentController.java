@@ -32,7 +32,7 @@ public class FXMLDocumentController implements Initializable {
     }    
     @FXML
     public void  clicarBotao(){
-        label.setText("Olá mundo!");
+        label.setText("Olá Mundo!");
     
     }
     
