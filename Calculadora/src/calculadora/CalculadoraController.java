@@ -194,7 +194,42 @@ public class CalculadoraController implements Initializable {
                 operacao = "";
             }
         });
-                            
+            
+       igualButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                valor2 = Double.parseDouble(telaTextField.getText());
+                
+                switch(operacao){
+                    case "+":
+                        resultado = valor1 + valor2;
+                        telaTextField.setText(String.valueOf(resultado));
+                        break;
+                    case "-":  
+                         resultado = valor1 - valor2;
+                        telaTextField.setText(String.valueOf(resultado));
+                        break;
+                        
+                    case "/":  
+                         resultado = valor1/ valor2;
+                        telaTextField.setText(String.valueOf(resultado));
+                        break;
+                        
+                    case "*":  
+                         resultado = valor1* valor2;
+                        telaTextField.setText(String.valueOf(resultado));
+                        break;
+                
+                }
+                operacao = "";
+                valor1 = 0;
+                valor2 = 0;
+                
+                }
+                
+                
+            
+        });
     }    
     
 }
